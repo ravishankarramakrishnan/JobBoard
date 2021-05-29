@@ -12,7 +12,7 @@ class Hasher():
 
     @staticmethod
     def verify_password(plain_pass, hashed_pass):
-        return password_context.verify(plain_pass, hashed_pass)  # Returns true/false
+        return password_context.verify(plain_pass, hashed_pass)  # Returns True/False
 
     @staticmethod
     def get_password_hash(plain_pass):

@@ -8,3 +8,15 @@ class UserCreate(BaseModel):
     username: str
     email: EmailStr
     password: str
+
+
+# Create new Class to secure the Web-App. Not show unnecessary fields in json
+class ShowUser(BaseModel):
+    username: str
+    email: str
+    is_active: bool
+
+    # Return it - Convert to Dictionary
+    class Config():
+        # Keep ORM Mode as true - Required for Pydantic to respond filtered results
+        orm_mode = True
