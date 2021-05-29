@@ -10,7 +10,8 @@ class Base:
     id: Any
     __name__: str
 
-    # Define a Function to Automatically generate Table Name from a Class Name. Create a Method
+    # Define a Function to Automatically generate Table Name from a Class Name.Create a Method
+    @declared_attr
     def __tablename__(cls) -> str:
         """ It takes the Class Name and Returns a String """
         return cls.__name__.lower()
